@@ -37,7 +37,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);\n  const [productMenuOpen, setProductMenuOpen] = useState(false);
   const [notice, setNotice] = useState('');
   const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [active, query]);
   const add = (p) => { setCart(old => old.some(x => x.id === p.id) ? old : [...old, p]); setNotice(p.name + ' added to your enquiry list'); setTimeout(() => setNotice(''), 2600); };
@@ -54,7 +54,7 @@ Please share wholesale prices and availability.');
     <header className="header">
       <a className="brand" href="#" aria-label="Shakir Plastic Store home"><span className="brand-mark">{<StoreLogo/>}</span><span className="brand-name">SHAKIR<span>PLASTIC STORE</span></span></a>
       <nav className={mobileOpen ? 'nav nav-open' : 'nav'}>
-        <a href="#home" onClick={() => setMobileOpen(false)}>Home</a><div className="nav-dropdown"><a className="nav-dropdown-trigger" href="/products" onClick={() => setMobileOpen(false)}>Products <ChevronDown size={14}/></a><div className="nav-dropdown-menu"><a href="/products">All Products</a><a href="/food-bags">Food Bags</a><a href="/shopping-bags">Shopping Bags</a><a href="/pizza-boxes">Pizza Boxes</a><a href="/disposable-items">Disposable Items</a><a href="/food-packaging">Food Packaging</a><a href="/paper-products">Paper Products</a></div></div><a href="/about" onClick={() => setMobileOpen(false)}>About Us</a><a href="/contact" onClick={() => setMobileOpen(false)}>Contact</a>
+        <a href="#home" onClick={() => setMobileOpen(false)}>Home</a><div className="nav-dropdown"><button className="nav-dropdown-trigger" type="button" aria-expanded={productMenuOpen} onClick={() => setProductMenuOpen(open => !open)}>Products <ChevronDown size={14}/></button><div className={productMenuOpen ? "nav-dropdown-menu menu-open" : "nav-dropdown-menu"}><a href="/products" onClick={() => setMobileOpen(false)}>All Products</a><a href="/food-bags" onClick={() => setMobileOpen(false)}>Food Bags</a><a href="/shopping-bags" onClick={() => setMobileOpen(false)}>Shopping Bags</a><a href="/pizza-boxes" onClick={() => setMobileOpen(false)}>Pizza Boxes</a><a href="/disposable-items" onClick={() => setMobileOpen(false)}>Disposable Items</a><a href="/food-packaging" onClick={() => setMobileOpen(false)}>Food Packaging</a><a href="/paper-products" onClick={() => setMobileOpen(false)}>Paper Products</a></div></div><a href="/about" onClick={() => setMobileOpen(false)}>About Us</a><a href="/contact" onClick={() => setMobileOpen(false)}>Contact</a>
       </nav>
       <div className="header-actions"><a className="header-whatsapp" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17}/> Get a Quote</a><button className="cart-button" onClick={() => setCartOpen(true)} aria-label="Open enquiry list"><ShoppingBag size={19}/><span>Enquiry</span><b>{cart.length}</b></button><button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">{mobileOpen ? <X/> : <Menu/>}</button></div>
     </header>
