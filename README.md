@@ -1,27 +1,28 @@
 # Shakir Plastic Store
 
-A modern, responsive React + Vite storefront for Shakir Plastic Store, Band Road, Lahore.
+Responsive React + Vite storefront for Shakir Plastic Store, Band Road, Lahore.
 
-## Features
-- Responsive homepage and product catalogue
-- Category filters and live product search
-- Product enquiry shortlist/cart
-- WhatsApp enquiry handoff with selected products
-- Wholesale-focused calls to action and contact details
-- SEO title and meta description
-- Admin catalogue screen at `/admin` with add, edit, delete, stock and price-note fields
-- Local catalogue export/import (JSON)
+## Pages
+- `/` — Homepage
+- `/products` — Full catalogue
+- `/food-bags` — Food bags
+- `/shopping-bags` — Shopping bags
+- `/pizza-boxes` — Pizza boxes
+- `/disposable-items` — Disposable items
+- `/food-packaging` — Food packaging
+- `/paper-products` — Paper products
+- `/about` — About the store
+- `/contact` — Contact details
+- `/admin` — Local catalogue manager
+
+Category URLs intentionally do not contain a `/category/` segment.
 
 ## Run locally
 ```bash
 npm install
 npm run dev
-```
-
-## Build
-```bash
 npm run build
 ```
 
 ## Notes
-This is a frontend catalogue and enquiry website. The `/admin` screen currently stores catalogue edits in the current browser's local storage only; it is not protected by authentication and does not sync to other devices or visitors. WhatsApp enquiries go directly to the store phone and are not recorded in the dashboard. Do not use this local preview as a secure production admin system. A production admin system needs server-side authentication, a shared database, and an API/backend. Online payments and order management also require backend integration.
+The storefront is a frontend catalogue and WhatsApp enquiry website. The admin screen stores edits in the current browser's local storage only; it is not protected by authentication and does not sync across devices or visitors. A production admin system requires server-side authentication, a shared database and an API/backend. Online payments and order management also require backend integration.
