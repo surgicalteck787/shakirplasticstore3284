@@ -49,11 +49,7 @@ function App() {
   const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [active, query]);
   const add = (p) => { setCart(old => old.some(x => x.id === p.id) ? old : [...old, p]); setNotice(p.name + ' added to your enquiry list'); setTimeout(() => setNotice(''), 2600); };
   const remove = id => setCart(old => old.filter(x => x.id !== id));
-  const message = encodeURIComponent('Assalam-o-Alaikum Shakir Plastic Store! I would like to enquire about these products:
-' + cart.map(p => '• ' + p.name).join('
-') + '
-Please share wholesale prices and availability.');
-  const whatsapp = cart.length ? `https://wa.me/${waNumber}?text=${message}` : `https://wa.me/${waNumber}?text=${encodeURIComponent('Assalam-o-Alaikum! I would like to enquire about your wholesale products.')}`;
+  const message = encodeURIComponent(`Assalam-o-Alaikum Shakir Plastic Store! I would like to enquire about these products:\n${cart.map(p => '• ' + p.name).join('\n')}\nPlease share wholesale prices and availability.`);\n  const whatsapp = cart.length ? `https://wa.me/${waNumber}?text=${message}` : `https://wa.me/${waNumber}?text=${encodeURIComponent('Assalam-o-Alaikum! I would like to enquire about your wholesale products.')}`;
   const selectCategory = name => { setActive(name); setMobileOpen(false); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); };
 
   return <div className="site-shell">
