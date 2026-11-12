@@ -4,5 +4,5 @@ import App from './App.jsx';
 import Admin from './Admin.jsx';
 import './index.css';
 import './admin.css';
-const isAdmin = window.location.pathname.replace(/\\/$/, '') === '/admin';
+const isAdmin = (window.location.pathname.endsWith('/') ? window.location.pathname.slice(0, -1) : window.location.pathname) === '/admin';
 createRoot(document.getElementById('root')).render(<React.StrictMode>{isAdmin ? <Admin /> : <App />}</React.StrictMode>);
