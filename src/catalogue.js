@@ -63,7 +63,18 @@ const rows = [
 ["Premium Coffee Valve Zipper Pouches","₨ 8,000 – ₨ 132,000","Pouches","premium coffee valve zipper pouches"],
 ["Premium Cookie Bakery Pouches","₨ 4,000 – ₨ 52,000","Pouches","premium cookie bakery pouches"],
 ["Seal Retort Stand Up Pouches","₨ 4,400 – ₨ 68,000","Pouches","seal retort stand-up pouches"],
-["Clear Zipper Standup Pouch","₨ 0 – ₨ 35 (confirm)","Pouches","clear zipper stand-up pouches"],\n["Printed Shopping Bags","Ask for current price","Shopping Bags","printed shopping bags"],\n["Plain Plastic Shopping Bags","Ask for current price","Shopping Bags","plain plastic shopping bags"],\n["Food Packing Bags","Ask for current price","Food Bags","food packing bags"],\n["Disposable Cups","Ask for current price","Disposable Items","disposable cups"],\n["Disposable Plates & Bowls","Ask for current price","Disposable Items","disposable plates and bowls"],\n["Takeaway Food Containers","Ask for current price","Food Packaging","takeaway food containers"],\n["Paper Bags","Ask for current price","Paper Products","paper bags"],\n["Garbage & Waste Bags","Ask for current price","Food Bags","garbage and waste bags"],\n["Bakery & Sweet Boxes","Ask for current price","Food Packaging","bakery and sweet boxes"],\n["Disposable Cutlery","Ask for current price","Disposable Items","disposable cutlery"],\n["Custom Printed Packaging","Ask for current price","Food Packaging","custom printed packaging"]
+["Clear Zipper Standup Pouch","₨ 0 – ₨ 35 (confirm)","Pouches","clear zipper stand-up pouches"],
+["Printed Shopping Bags","Ask for current price","Shopping Bags","printed shopping bags"],
+["Plain Plastic Shopping Bags","Ask for current price","Shopping Bags","plain plastic shopping bags"],
+["Food Packing Bags","Ask for current price","Food Bags","food packing bags"],
+["Disposable Cups","Ask for current price","Disposable Items","disposable cups"],
+["Disposable Plates & Bowls","Ask for current price","Disposable Items","disposable plates and bowls"],
+["Takeaway Food Containers","Ask for current price","Food Packaging","takeaway food containers"],
+["Paper Bags","Ask for current price","Paper Products","paper bags"],
+["Garbage & Waste Bags","Ask for current price","Food Bags","garbage and waste bags"],
+["Bakery & Sweet Boxes","Ask for current price","Food Packaging","bakery and sweet boxes"],
+["Disposable Cutlery","Ask for current price","Disposable Items","disposable cutlery"],
+["Custom Printed Packaging","Ask for current price","Food Packaging","custom printed packaging"]
 ];
 const slugify = value => value.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const imageByCategory = {
