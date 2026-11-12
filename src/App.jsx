@@ -16,7 +16,7 @@ const products = [
   { id: 2, name: 'Plain Plastic Shopping Bags', category: 'Shopping Bags', detail: 'Strong everyday carry bags', image: 'photo-1602143407151-7111542de6e8', tag: 'Wholesale' },
   { id: 3, name: 'Food Packing Bags', category: 'Food Bags', detail: 'For bakeries, stores & takeaway', image: 'photo-1606787366850-de6330128bfc', tag: 'Best seller' },
   { id: 4, name: 'Pizza Boxes', category: 'Pizza Boxes', detail: 'Sturdy food-grade packaging', image: 'photo-1579751626657-72bc17010498', tag: 'Popular' },
-  { id: 5, name: 'Disposable Cups', category: 'Disposable Items', detail: 'Convenient serving essentials', image: 'photo-1513558161293-cônio', tag: '' },
+  { id: 5, name: 'Disposable Cups', category: 'Disposable Items', detail: 'Convenient serving essentials', image: 'photo-1544787219-7f47ccb76574', tag: '' },
   { id: 6, name: 'Disposable Plates & Bowls', category: 'Disposable Items', detail: 'For events, catering & daily use', image: 'photo-1603199506016-b9a594b593c0', tag: '' },
   { id: 7, name: 'Takeaway Food Containers', category: 'Food Packaging', detail: 'Practical takeaway packaging', image: 'photo-1601050690597-df0568f70950', tag: 'Trending' },
   { id: 8, name: 'Paper Bags', category: 'Paper Products', detail: 'A neat option for retail & food', image: 'photo-1607082348824-0a96f2a4b9da', tag: '' },
@@ -25,7 +25,7 @@ const products = [
   { id: 11, name: 'Disposable Cutlery', category: 'Disposable Items', detail: 'Forks, spoons & serving items', image: 'photo-1603199506016-b9a594b593c0', tag: '' },
   { id: 12, name: 'Custom Printed Packaging', category: 'Food Packaging', detail: 'Ask us about bulk custom orders', image: 'photo-1607082349566-187342175e2f', tag: 'Custom' }
 ];
-const imageUrl = (id) => id.includes('cônio') ? 'https://images.unsplash.com/photo-1513558161293-cônio?auto=format&fit=crop&w=900&q=80' : `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
+const imageUrl = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
 
 function App() {
   const [active, setActive] = useState('All Products');
