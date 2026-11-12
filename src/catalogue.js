@@ -78,23 +78,36 @@ const rows = [
 ];
 const slugify = value => value.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const imageByCategory = {
-  "Disposable Items":"photo-1603199506016-b9a594b593c0",
-  "Food Packaging":"photo-1601050690597-df0568f70950",
-  "Pizza Boxes":"photo-1579751626657-72bc17010498",
-  "Shopping Bags":"photo-1607082348824-0a96f2a4b9da",
-  "Paper Products":"photo-1607082349566-187342175e2f",
-  "Bottles & Cups":"photo-1544787219-7f47ccb76574",
-  "Cake Boxes":"photo-1608198093002-ad4e005484b4",
-  "Pouches":"photo-1606787366850-de6330128bfc",
-  "Custom Boxes":"photo-1607082349566-187342175e2f",
-  "Other Supplies":"photo-1581578731548-c64695cc6952"
+  "Pizza Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/12/kraft-pizza-box-packaging-master-pakistan-2-750x750.webp",
+  "Food Packaging": "https://packagingmaster.pk/wp-content/uploads/2025/11/burger-boxes-custom-packaging-pakistan-packaging-master-2-750x750.webp",
+  "Cake Boxes": "https://packagingmaster.pk/wp-content/uploads/2026/01/cake-box-8x8x6-5-with-window-packaging-master-pakistan-1-750x750.webp",
+  "Shopping Bags": "https://packagingmaster.pk/wp-content/uploads/2025/11/kraft-paper-bag-twisted-rope-handle-packaging-master-pakistan-2-750x750.webp",
+  "Bottles & Cups": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-glass-with-dome-lid-packaging-master-pakistan-3-750x750.png",
+  "Pouches": "https://packagingmaster.pk/wp-content/uploads/2026/05/seal-retort-stand-up-pouch-manufacturer-pakistan-750x750.webp",
+  "Disposable Items": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-glass-with-dome-lid-packaging-master-pakistan-3-750x750.png",
+  "Paper Products": "https://packagingmaster.pk/wp-content/uploads/2025/11/kraft-paper-bag-twisted-rope-handle-packaging-master-pakistan-2-750x750.webp",
+  "Food Bags": "https://packagingmaster.pk/wp-content/uploads/2025/11/kraft-paper-bag-twisted-rope-handle-packaging-master-pakistan-2-750x750.webp",
+  "Custom Boxes": "https://packagingmaster.pk/wp-content/uploads/2026/01/cake-box-8x8x6-5-with-window-packaging-master-pakistan-1-750x750.webp",
+  "Other Supplies": "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
+};
+const imageOverrides = {
+  "Pizza Box": "https://packagingmaster.pk/wp-content/uploads/2025/12/kraft-pizza-box-packaging-master-pakistan-2-750x750.webp",
+  "Burger Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/burger-boxes-custom-packaging-pakistan-packaging-master-2-750x750.webp",
+  "Cupcake Boxes": "https://packagingmaster.pk/wp-content/uploads/2026/02/cupcake-packaging-boxes-pakistan-2-750x750.webp",
+  "Cake Box 8x8x6.5 – With Window": "https://packagingmaster.pk/wp-content/uploads/2026/01/cake-box-8x8x6-5-with-window-packaging-master-pakistan-1-750x750.webp",
+  "Kraft Paper Bag With Twisted Rope Handle": "https://packagingmaster.pk/wp-content/uploads/2025/11/kraft-paper-bag-twisted-rope-handle-packaging-master-pakistan-2-750x750.webp",
+  "Disposable Black Plastic Food Container": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-black-plastic-food-container-packaging-master-pakistan-3-750x750.webp",
+  "Single Wall Coffee Cup": "https://packagingmaster.pk/wp-content/uploads/2026/02/single-wall-coffee-cups-pakistan-packaging-master-3-750x750.webp",
+  "Disposable Glass With Dome Lid": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-glass-with-dome-lid-packaging-master-pakistan-3-750x750.png",
+  "Seal Retort Stand Up Pouches": "https://packagingmaster.pk/wp-content/uploads/2026/05/seal-retort-stand-up-pouch-manufacturer-pakistan-750x750.webp",
+  "Dip Sauce Containers": "https://packagingmaster.pk/wp-content/uploads/2026/05/leak-proof-dip-sauce-containers-2-750x750.webp"
 };
 export const catalogueProducts = rows.map(([name,price,category,keyword],index) => ({
   id:index+1, name, slug:slugify(name), price, category, keyword,
   detail: 'Packaging and supply option for businesses, retailers, food outlets and bulk buyers. Ask Shakir Plastic Store to confirm current stock, available specifications and wholesale rates.',
   description: `${name} is listed in the Shakir Plastic Store product catalogue for customers looking for practical supply options for their business. This item may suit retailers, food businesses, cafés, bakeries, event suppliers or other commercial requirements depending on the selected product. Contact our Band Road, Lahore team to confirm the material, dimensions, colour, pack quantity and current availability before placing an order.`,
   features: ['Ask about available sizes and specifications','Bulk and wholesale enquiry support','Confirm material and pack quantity before ordering','WhatsApp assistance from Shakir Plastic Store'],
-  image:imageByCategory[category] || imageByCategory["Food Packaging"],
+  image:imageOverrides[name] || imageByCategory[category] || imageByCategory["Food Packaging"],
   tag:index<12?'Popular':''
 }));
 export const catalogueCategories = [...new Set(catalogueProducts.map(p=>p.category))];
