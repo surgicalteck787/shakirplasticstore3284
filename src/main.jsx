@@ -11,6 +11,6 @@ const routes={
 '/admin':<Admin/>,'/products':<ProductsPage/>,'/about':<AboutPage/>,'/contact':<ContactPage/>,
 '/food-bags':<CategoryPage slug="food-bags"/>,'/shopping-bags':<CategoryPage slug="shopping-bags"/>,'/pizza-boxes':<CategoryPage slug="pizza-boxes"/>,'/disposable-items':<CategoryPage slug="disposable-items"/>,'/food-packaging':<CategoryPage slug="food-packaging"/>,'/paper-products':<CategoryPage slug="paper-products"/>
 };
-const productMatch=path.match(/^\\/product\\/([^/]+)$/);
+const productMatch=path.match(/^\/product\/([^/]+)$/);
 const page=productMatch?<ProductDetail slug={productMatch[1]}/>:routes[path]||<App/>;
 createRoot(document.getElementById('root')).render(<React.StrictMode>{page}</React.StrictMode>);
