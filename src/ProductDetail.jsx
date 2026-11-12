@@ -18,7 +18,7 @@ const categoryUses = {
   'Other Supplies':'shops, service businesses and customers with specialised supply needs'
 };
 export default function ProductDetail({slug}) {
-  const product=findCatalogueProduct(slug);
+  const product=findCatalogueProduct(slug) || (()=>{try{const saved=JSON.parse(localStorage.getItem('sps-products-v1')||'[]');const match=saved.find(p=>(p.slug||String(p.name||'').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''))===slug);return match?{...match,slug:match.slug||slug,price:match.price||'Ask for current price',description:match.description||match.detail||'Contact Shakir Plastic Store for product specifications, sizes, material, pack quantity and current wholesale availability.',features:match.features||['Ask about available sizes and specifications','Bulk and wholesale enquiry support','Confirm material and pack quantity before ordering','WhatsApp assistance from Shakir Plastic Store']}:null}catch{return null}})();
   const [reviewName,setReviewName]=useState('');
   const [reviewRating,setReviewRating]=useState('5');
   const [reviewText,setReviewText]=useState('');
