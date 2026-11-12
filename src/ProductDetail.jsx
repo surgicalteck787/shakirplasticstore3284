@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, MessageCircle, PackageCheck, Star 
 import { findCatalogueProduct, catalogueProducts } from './catalogue';
 import './pages.css';
 const wa=t=>'https://wa.me/923204855261?text='+encodeURIComponent(t);
-const image=id=>'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w=1200&q=88';
+const image=id=>/^https?:\\/\\//i.test(id)?id:'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w=1200&q=88';
 const categoryUses = {
   'Shopping Bags':'retail shops, supermarkets, boutiques and takeaway counters',
   'Food Bags':'bakeries, grocery stores, food counters and takeaway businesses',
