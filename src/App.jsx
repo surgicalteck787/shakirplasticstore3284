@@ -27,7 +27,8 @@ const defaultProducts = [
 ];
 const imageUrl = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
 
-function StoreLogo(){return <svg className="store-logo-art" viewBox="0 0 64 64" role="img" aria-label="Shakir Plastic Store logo"><defs><linearGradient id="spsLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#285f47"/><stop offset="1" stopColor="#102f24"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#spsLogo)"/><path d="M19 25h26l-2.5 25h-21z" fill="#e3f0c4" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round"/><path d="M25 26v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#e3f0c4" strokeWidth="3" strokeLinecap="round"/><path d="M26 37c4-7 11-7 15-1-6 0-9 3-11 8" fill="none" stroke="#285f47" strokeWidth="2.5" strokeLinecap="round"/><path d="M30 43c1-5 4-8 9-10" fill="none" stroke="#285f47" strokeWidth="2" strokeLinecap="round"/><circle cx="47" cy="16" r="5" fill="#d9ef8b" stroke="#fff" strokeWidth="1.5"/></svg>}\nfunction App() {
+function StoreLogo(){return <svg className="store-logo-art" viewBox="0 0 64 64" role="img" aria-label="Shakir Plastic Store logo"><defs><linearGradient id="spsLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#285f47"/><stop offset="1" stopColor="#102f24"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#spsLogo)"/><path d="M19 25h26l-2.5 25h-21z" fill="#e3f0c4" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round"/><path d="M25 26v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#e3f0c4" strokeWidth="3" strokeLinecap="round"/><path d="M26 37c4-7 11-7 15-1-6 0-9 3-11 8" fill="none" stroke="#285f47" strokeWidth="2.5" strokeLinecap="round"/><path d="M30 43c1-5 4-8 9-10" fill="none" stroke="#285f47" strokeWidth="2" strokeLinecap="round"/><circle cx="47" cy="16" r="5" fill="#d9ef8b" stroke="#fff" strokeWidth="1.5"/></svg>}
+function App() {
   const [products, setProducts] = useState(() => {
     try { const saved = localStorage.getItem('sps-products-v1'); return saved ? JSON.parse(saved) : defaultProducts; }
     catch { return defaultProducts; }
@@ -41,7 +42,10 @@ function StoreLogo(){return <svg className="store-logo-art" viewBox="0 0 64 64" 
   const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [active, query]);
   const add = (p) => { setCart(old => old.some(x => x.id === p.id) ? old : [...old, p]); setNotice(p.name + ' added to your enquiry list'); setTimeout(() => setNotice(''), 2600); };
   const remove = id => setCart(old => old.filter(x => x.id !== id));
-  const message = encodeURIComponent('Assalam-o-Alaikum Shakir Plastic Store! I would like to enquire about these products:\n' + cart.map(p => '• ' + p.name).join('\n') + '\nPlease share wholesale prices and availability.');
+  const message = encodeURIComponent('Assalam-o-Alaikum Shakir Plastic Store! I would like to enquire about these products:
+' + cart.map(p => '• ' + p.name).join('
+') + '
+Please share wholesale prices and availability.');
   const whatsapp = cart.length ? `https://wa.me/${waNumber}?text=${message}` : `https://wa.me/${waNumber}?text=${encodeURIComponent('Assalam-o-Alaikum! I would like to enquire about your wholesale products.')}`;
   const selectCategory = name => { setActive(name); setMobileOpen(false); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); };
 
@@ -78,4 +82,6 @@ function StoreLogo(){return <svg className="store-logo-art" viewBox="0 0 64 64" 
     {cartOpen && <div className="drawer-backdrop" onClick={()=>setCartOpen(false)}><aside className="cart-drawer" onClick={e=>e.stopPropagation()}><div className="drawer-head"><div><span className="eyebrow">YOUR SHORTLIST</span><h3>Product enquiry <span>({cart.length})</span></h3></div><button className="icon-button" onClick={()=>setCartOpen(false)} aria-label="Close enquiry"><X/></button></div>{cart.length===0 ? <div className="drawer-empty"><ShoppingBag size={36}/><h4>Your list is empty</h4><p>Add products to send one enquiry to our team.</p><button className="btn btn-primary" onClick={()=>{setCartOpen(false);document.getElementById('products').scrollIntoView({behavior:'smooth'})}}>Browse products</button></div> : <><div className="drawer-items">{cart.map(p=><div className="drawer-item" key={p.id}><img src={imageUrl(p.image)} alt=""/><div><b>{p.name}</b><small>{p.category}</small></div><button onClick={()=>remove(p.id)} aria-label={'Remove '+p.name}><X size={17}/></button></div>)}</div><div className="drawer-foot"><p>Send your shortlist on WhatsApp and ask for current wholesale prices and availability.</p><a className="btn btn-primary btn-full" href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={18}/> Send enquiry on WhatsApp</a></div></>}</aside></div>}
   </div>;
 }
-\n\nexport default App;
+
+
+export default App;
