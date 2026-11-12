@@ -31,13 +31,14 @@ const defaultProducts = [
   { id: 11, name: 'Disposable Cutlery', category: 'Disposable Items', detail: 'Forks, spoons & serving items', image: 'photo-1603199506016-b9a594b593c0', tag: '' },
   { id: 12, name: 'Custom Printed Packaging', category: 'Food Packaging', detail: 'Ask us about bulk custom orders', image: 'photo-1607082349566-187342175e2f', tag: 'Custom' }
 ];
-const imageUrl = (id) => id.startsWith('http://') || id.startsWith('https://') ? id : `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
+const slugify = value => String(value || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const imageUrl = (id) => String(id || '').startsWith('http://') || String(id || '').startsWith('https://') ? id : `https://images.unsplash.com/${id || 'photo-1607082349566-187342175e2f'}?auto=format&fit=crop&w=900&q=85`;
 
 function StoreLogo(){return <svg className="store-logo-art" viewBox="0 0 64 64" role="img" aria-label="Shakir Plastic Store logo"><defs><linearGradient id="spsLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#285f47"/><stop offset="1" stopColor="#102f24"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#spsLogo)"/><path d="M19 25h26l-2.5 25h-21z" fill="#e3f0c4" stroke="#fff" strokeWidth="1.5" strokeLinejoin="round"/><path d="M25 26v-4a7 7 0 0 1 14 0v4" fill="none" stroke="#e3f0c4" strokeWidth="3" strokeLinecap="round"/><path d="M26 37c4-7 11-7 15-1-6 0-9 3-11 8" fill="none" stroke="#285f47" strokeWidth="2.5" strokeLinecap="round"/><path d="M30 43c1-5 4-8 9-10" fill="none" stroke="#285f47" strokeWidth="2" strokeLinecap="round"/><circle cx="47" cy="16" r="5" fill="#d9ef8b" stroke="#fff" strokeWidth="1.5"/></svg>}
 function App() {
   const [products, setProducts] = useState(() => {
-    try { const saved = localStorage.getItem('sps-products-v1'); const extras = saved ? JSON.parse(saved) : defaultProducts; const known = new Set(catalogueProducts.map(p => p.name.toLowerCase())); return [...catalogueProducts, ...extras.filter(p => !known.has(String(p.name || '').toLowerCase()))]; }
-    catch { return [...catalogueProducts, ...defaultProducts]; }
+    try { const saved = localStorage.getItem('sps-products-v1'); const extras = saved ? JSON.parse(saved) : defaultProducts; const known = new Set(catalogueProducts.map(p => p.name.toLowerCase())); return [...catalogueProducts, ...extras.filter(p => !known.has(String(p.name || '').toLowerCase())).map(p => ({ ...p, slug: p.slug || slugify(p.name) }))]; }
+    catch { return [...catalogueProducts, ...defaultProducts.map(p => ({ ...p, slug: slugify(p.name) }))]; }
   });
   const [active, setActive] = useState('All Products');
   const [query, setQuery] = useState('');
@@ -46,7 +47,7 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productMenuOpen, setProductMenuOpen] = useState(false);
   const [notice, setNotice] = useState('');
-  const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [active, query]);
+  const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [products, active, query]);
   const add = (p) => { setCart(old => old.some(x => x.id === p.id) ? old : [...old, p]); setNotice(p.name + ' added to your enquiry list'); setTimeout(() => setNotice(''), 2600); };
   const remove = id => setCart(old => old.filter(x => x.id !== id));
   const message = encodeURIComponent(`Assalam-o-Alaikum Shakir Plastic Store! I would like to enquire about these products:\n${cart.map(p => '• ' + p.name).join('\n')}\nPlease share wholesale prices and availability.`);
