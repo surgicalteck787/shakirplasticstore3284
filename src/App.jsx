@@ -37,7 +37,8 @@ function App() {
   const [query, setQuery] = useState('');
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);\n  const [productMenuOpen, setProductMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [productMenuOpen, setProductMenuOpen] = useState(false);
   const [notice, setNotice] = useState('');
   const visible = useMemo(() => products.filter(p => (active === 'All Products' || p.category === active) && (p.name + p.category + p.detail).toLowerCase().includes(query.toLowerCase())), [active, query]);
   const add = (p) => { setCart(old => old.some(x => x.id === p.id) ? old : [...old, p]); setNotice(p.name + ' added to your enquiry list'); setTimeout(() => setNotice(''), 2600); };
