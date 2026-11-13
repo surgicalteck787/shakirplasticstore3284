@@ -41,7 +41,7 @@ export default function ProductDetail({slug}) {
   const meta=document.querySelector('meta[name="description"]');
   if(meta) meta.content=umrahProduct?'Umrah Tabarruk Boxes for Zamzam water, dates and return gifts. Ask Shakir Plastic Store, Band Road Lahore about sizes, bulk orders and customisation.':shawarmaProduct?'Shawarma boxes for restaurants, cafés and takeaway businesses. Ask Shakir Plastic Store Lahore about kraft options, sizes and wholesale supply.':kraftShawarmaProduct?'Kraft shawarma boxes for restaurants, fast-food shops and takeaway counters. Ask Shakir Plastic Store Lahore about sizes, bulk orders and current wholesale rates.':'View '+product.name+' details, product information and wholesale price enquiry at Shakir Plastic Store, Band Road Lahore.';
   return <div className="inner-page">
-    <header className="page-header"><a className="page-brand" href="/"><b>SHAKIR<small>PLASTIC STORE</small></b></a><nav><a href="/">Home</a><a href="/products">All Products</a><a href="/contact">Contact</a></nav><a className="page-quote" href="/contact">Contact Store</a></header>
+    <div className="inner-topbar">WHOLESALE PACKAGING & DISPOSABLE SUPPLIES <span>Band Road, Lahore · Pakistan</span></div><header className="page-header"><a className="page-brand" href="/"><b>SHAKIR<small>PLASTIC STORE</small></b></a><nav><a href="/">Home</a><a href="/products">All Products</a><a href="/food-packaging">Food Packaging</a><a href="/about">About Us</a><a href="/contact">Contact</a></nav><a className="page-quote" href="/contact">Contact Store</a></header>
     <main className="inner-main product-detail-main">
       <a className="back-link" href="/products"><ArrowLeft size={15}/> Back to all products</a>
       <div className="product-detail-layout">
@@ -151,6 +151,6 @@ export default function ProductDetail({slug}) {
       </section>
       {related.length>0&&<section className="related-products"><div className="inner-section-head"><div><span>YOU MAY ALSO NEED</span><h2>Related products</h2></div><a href="/products">View full catalogue <ArrowRight size={15}/></a></div><div className="inner-product-grid">{related.map(p=><article className="inner-product" key={p.slug}><a href={'/product/'+p.slug}><img src={image(p.image)} alt={p.name}/></a><div><small>{p.category}</small><h3><a href={'/product/'+p.slug}>{p.name}</a></h3><p>{p.detail}</p><b>{p.price}</b><a href={'/product/'+p.slug}>See Details <ArrowUpRight size={15}/></a></div></article>)}</div></section>}
     </main>
-    <footer className="page-footer"><b>SHAKIR PLASTIC STORE</b><span>Wholesale packaging and disposable supplies · Band Road, Lahore</span><a href="tel:+923204855261">0320 4855261</a></footer>
+    <footer className="page-footer"><b>SHAKIR PLASTIC STORE</b><span>Wholesale packaging and disposable supplies · Band Road, Lahore</span><a href="tel:+923204855261">0320 4855261</a><a href="/products">Browse Products</a></footer>
   </div>;
 }
