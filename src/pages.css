@@ -38,3 +38,17 @@
 .container-image-gallery img{display:block;width:100%;height:250px;object-fit:contain;background:#f7f8f6;border-radius:9px}
 .container-image-gallery figcaption{padding:10px 2px 2px;color:#59665d;font-size:13px}
 @media(max-width:640px){.container-variant-controls,.container-image-gallery{grid-template-columns:1fr}.container-image-gallery img{height:220px}}
+
+
+.kraft-shawarma-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+.kraft-shawarma-gallery figure{margin:0;padding:10px;background:#fff;border:1px solid #e5ebe3;border-radius:12px}
+.kraft-shawarma-gallery img{display:block;width:100%;height:210px;object-fit:contain;background:#f8f8f5;border-radius:8px}
+.kraft-shawarma-gallery figcaption{font-size:11px;line-height:1.5;color:#6c796f;padding:9px 2px 1px}
+.kraft-internal-links{margin:25px 0;padding:22px;background:#fff;border:1px solid #e2e9df;border-radius:12px}
+.kraft-internal-links h3{margin-top:0}
+.kraft-internal-links>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
+.kraft-internal-links a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;border-radius:8px;background:#f1f6ee;color:#28563e;text-decoration:none;font-size:12px;font-weight:750}
+.kraft-internal-links a:hover{background:#e4efdf}
+.kraft-internal-links p a{display:inline-flex;align-items:center;gap:5px}
+@media(max-width:760px){.kraft-shawarma-gallery{grid-template-columns:1fr 1fr}.kraft-shawarma-gallery img{height:175px}.kraft-internal-links>div{grid-template-columns:1fr}}
+@media(max-width:420px){.kraft-shawarma-gallery{grid-template-columns:1fr}.kraft-shawarma-gallery img{height:220px}}
