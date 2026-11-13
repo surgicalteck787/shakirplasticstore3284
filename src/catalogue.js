@@ -95,7 +95,11 @@ const imageByCategory = {
   "Other Supplies": "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
 };
 const imageOverrides = {
-  "Shawarma Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/shawarma-boxes-custom-packaging-pakistan-packaging-master-3-750x750.webp",
+  "Shawarma Boxes": "https://fastfoodpak.com/cdn/shop/files/Shawarma_Packaging_Boxes_6.webp?v=1776159421&width=1600",
+  "Kraft Shawarma Boxes": "https://s.alicdn.com/@sc04/kf/H1b8f9b6fd4b14bfba62d9ee0a5030893C/Factory-Custom-Design-Disposable-Doner-Kebab-Pie-Kraft-Food-Packing-Pita-Bread-Shawarma-Box-Takeaway-Paper-Packaging-Box.jpg",
+  "White Shawarma Boxes": "https://www.salmangroup.com/assets/products/large-273-ARABIC.jpg",
+  "Large Shawarma Boxes": "https://s.alicdn.com/@sc04/kf/H23a995bdf2494870abff1b81abf93272H/Custom-Logo-Disposable-Grill-Pie-Kraft-Burrito-Shawarma-Wrap-Paper-Box-Food-Shawarma-Packaging-Tray-Takeaway-Box.jpg",
+  "Custom Printed Shawarma Boxes": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/16b2fd32061985.566d80e7d73bd.jpg",
   "Umrah Tabarruk Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/umrah-tabarruk-boxes-custom-packaging-pakistan-packaging-master-1-750x750.webp",
   "Pizza Box": "https://packagingmaster.pk/wp-content/uploads/2025/12/kraft-pizza-box-packaging-master-pakistan-2-750x750.webp",
   "Burger Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/burger-boxes-custom-packaging-pakistan-packaging-master-2-750x750.webp",
