@@ -106,7 +106,7 @@ const imageOverrides = {
   "Cupcake Boxes": "https://packagingmaster.pk/wp-content/uploads/2026/02/cupcake-packaging-boxes-pakistan-2-750x750.webp",
   "Cake Box 8x8x6.5 – With Window": "https://packagingmaster.pk/wp-content/uploads/2026/01/cake-box-8x8x6-5-with-window-packaging-master-pakistan-1-750x750.webp",
   "Kraft Paper Bag With Twisted Rope Handle": "https://packagingmaster.pk/wp-content/uploads/2025/11/kraft-paper-bag-twisted-rope-handle-packaging-master-pakistan-2-750x750.webp",
-  "Disposable Black Plastic Food Container": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-black-plastic-food-container-packaging-master-pakistan-3-750x750.webp",
+  "Disposable Black Plastic Food Container": "https://s.alicdn.com/@sc04/kf/H1bbf7986bb2c4ff7a2a47d56cc051cb6w.jpg_640x640.jpg",
   "Single Wall Coffee Cup": "https://packagingmaster.pk/wp-content/uploads/2026/02/single-wall-coffee-cups-pakistan-packaging-master-3-750x750.webp",
   "Disposable Glass With Dome Lid": "https://packagingmaster.pk/wp-content/uploads/2025/11/disposable-glass-with-dome-lid-packaging-master-pakistan-3-750x750.png",
   "Seal Retort Stand Up Pouches": "https://packagingmaster.pk/wp-content/uploads/2026/05/seal-retort-stand-up-pouch-manufacturer-pakistan-750x750.webp",
@@ -114,9 +114,9 @@ const imageOverrides = {
 };
 export const catalogueProducts = rows.map(([name,price,category,keyword],index) => ({
   id:index+1, name, slug:slugify(name), price, category, keyword,
-  detail: 'Packaging and supply option for businesses, retailers, food outlets and bulk buyers. Ask Shakir Plastic Store to confirm current stock, available specifications and wholesale rates.',
-  description: `${name} is listed in the Shakir Plastic Store product catalogue for customers looking for practical supply options for their business. This item may suit retailers, food businesses, cafés, bakeries, event suppliers or other commercial requirements depending on the selected product. Contact our Band Road, Lahore team to confirm the material, dimensions, colour, pack quantity and current availability before placing an order.`,
-  features: ['Ask about available sizes and specifications','Bulk and wholesale enquiry support','Confirm material and pack quantity before ordering','WhatsApp assistance from Shakir Plastic Store'],
+  detail: name === 'Disposable Black Plastic Food Container' ? 'Black food container with clear lid for takeaway, meal prep, restaurants and catering. Ask about sizes and bulk packs.' : 'Packaging and supply option for businesses, retailers, food outlets and bulk buyers. Ask Shakir Plastic Store to confirm current stock, available specifications and wholesale rates.',
+  description: name === 'Disposable Black Plastic Food Container' ? 'Disposable Black Plastic Food Containers are practical takeaway packaging for restaurants, cafés, caterers and food delivery businesses. The black base with a clear lid presents rice, curries, salads, noodles, desserts and other meals neatly. Ask Shakir Plastic Store to confirm available capacities, food-contact material, lid fit, pack quantity and current wholesale price before ordering.' : `${name} is listed in the Shakir Plastic Store product catalogue for customers looking for practical supply options for their business. This item may suit retailers, food businesses, cafés, bakeries, event suppliers or other commercial requirements depending on the selected product. Contact our Band Road, Lahore team to confirm the material, dimensions, colour, pack quantity and current availability before placing an order.`,
+  features: name === 'Disposable Black Plastic Food Container' ? ['Black container base with transparent lid (confirm exact variant)','Ask about available capacities including 1500ml','Suitable for takeaway, meal prep and catering enquiries','Confirm microwave use, leak resistance and pack quantity with the store'] : ['Ask about available sizes and specifications','Bulk and wholesale enquiry support','Confirm material and pack quantity before ordering','WhatsApp assistance from Shakir Plastic Store'],
   image:imageOverrides[name] || imageByCategory[category] || imageByCategory["Food Packaging"],
   tag:index<12?'Popular':''
 }));
