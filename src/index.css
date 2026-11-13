@@ -12,3 +12,77 @@
 @media(max-width:1050px){.store-header{grid-template-columns:200px minmax(180px,1fr) auto;gap:18px}.store-head-actions{gap:13px}.bazaar-hero-wrap{grid-template-columns:215px 1fr}.bazaar-category-sidebar>a{font-size:10px;padding:9px 11px}.bazaar-hero-slide{min-height:420px}.bazaar-product-grid{grid-template-columns:repeat(3,1fr)}.bazaar-category-tiles{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:760px){.store-topbar>div{padding:8px 15px;font-size:9px}.store-topbar-note{display:none}.store-header{padding:12px 15px;grid-template-columns:1fr auto;gap:12px}.store-brand{font-size:15px}.sps-logo{width:40px;height:40px}.store-search{grid-column:1/-1;grid-row:2;height:41px}.store-search button{padding:0 15px}.store-head-actions{gap:13px}.store-head-contact span,.store-cart span{display:none}.store-mobile-toggle{display:grid;place-items:center}.store-nav{display:none;height:auto;align-items:stretch;flex-direction:column;padding:8px 15px}.store-nav.is-open{display:flex}.store-nav>a,.store-nav-drop>a{padding:12px 10px;min-height:40px}.store-nav-menu{position:static;box-shadow:none;border:0;border-left:2px solid #dbe8d4;margin-left:10px;padding:0 0 0 8px}.store-nav-drop:focus-within .store-nav-menu{display:block}.bazaar-hero-wrap{padding:0 14px;margin-top:15px;grid-template-columns:1fr}.bazaar-category-sidebar{display:none}.bazaar-hero-slide{min-height:380px}.bazaar-hero-content{padding:34px 25px}.bazaar-hero-content h1{font-size:39px;letter-spacing:-1.5px}.bazaar-hero-content p{font-size:12px;max-width:310px}.bazaar-slide-arrow{width:31px;height:31px}.bazaar-slide-arrow.prev{left:8px}.bazaar-slide-arrow.next{right:8px}.bazaar-benefits{grid-template-columns:repeat(2,1fr);gap:17px;padding:20px 15px}.bazaar-benefits b{font-size:10px}.bazaar-benefits small{font-size:9px}.bazaar-categories-section,.bazaar-products-section,.bazaar-promo-row,.bazaar-about-strip,.bazaar-contact-strip{padding:36px 15px}.bazaar-section-title{align-items:flex-start;flex-direction:column;gap:10px}.bazaar-section-title h2{font-size:26px}.bazaar-category-tiles{grid-template-columns:repeat(2,1fr);gap:9px}.bazaar-category-tiles>a{min-height:100px;padding:12px}.bazaar-category-tiles b{font-size:11px}.bazaar-products-section{padding-top:22px}.bazaar-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.bazaar-product-image{height:150px}.bazaar-product-body{padding:11px 10px}.bazaar-product-body h3{font-size:11px}.bazaar-product-body p{font-size:9px;min-height:29px}.bazaar-product-bottom{align-items:flex-start;flex-direction:column}.bazaar-product-bottom strong{font-size:9px}.bazaar-product-bottom button{padding:7px 9px}.bazaar-promo-row{grid-template-columns:1fr;gap:12px}.bazaar-promo-card{height:185px}.bazaar-promo-card b{font-size:21px}.bazaar-about-strip{grid-template-columns:1fr;gap:15px}.bazaar-about-strip>div{padding:5px}.bazaar-about-strip h2,.bazaar-contact-strip h2{font-size:29px}.bazaar-about-strip>img{height:220px}.bazaar-contact-strip{align-items:flex-start;flex-direction:column;gap:18px;padding:26px 20px}.bazaar-footer-main{grid-template-columns:1fr 1fr;gap:25px;padding:30px 17px}.bazaar-footer-bottom{padding:15px 17px;gap:10px;flex-wrap:wrap;font-size:9px}}
 @media(max-width:390px){.bazaar-hero-slide{min-height:340px}.bazaar-hero-content h1{font-size:34px}.bazaar-benefits{gap:12px}.bazaar-product-image{height:130px}.bazaar-footer-main{grid-template-columns:1fr}}
+
+/* Readability pass: larger, clearer storefront typography */
+.store-topbar{font-size:13px}
+.store-brand{font-size:19px}
+.store-brand strong{font-size:10px}
+.store-search input{font-size:15px}
+.store-head-contact,.store-cart{font-size:14px}
+.store-nav>a,.store-nav-drop>a{font-size:14px}
+.store-nav-menu a{font-size:14px}
+.bazaar-sidebar-title{font-size:13px}
+.bazaar-category-sidebar>a{font-size:14px;padding-top:12px;padding-bottom:12px}
+.bazaar-hero-content p{font-size:16px;line-height:1.75}
+.bazaar-eyebrow{font-size:12px}
+.bazaar-primary-btn{font-size:14px}
+.bazaar-benefits b{font-size:14px}
+.bazaar-benefits small{font-size:12px}
+.bazaar-section-title h2{font-size:34px}
+.bazaar-section-title>div>span,.bazaar-about-strip>div>span,.bazaar-contact-strip>div>span{font-size:11px}
+.bazaar-section-title>a{font-size:13px}
+.bazaar-category-tiles b{font-size:14px}
+.bazaar-category-tiles small{font-size:11px}
+.bazaar-filters button{font-size:12px}
+.bazaar-product-body>small{font-size:10px}
+.bazaar-product-body h3{font-size:15px;line-height:1.4}
+.bazaar-product-body p{font-size:12px;line-height:1.6}
+.bazaar-product-bottom strong{font-size:12px}
+.bazaar-product-bottom button{font-size:11px}
+.bazaar-promo-card small{font-size:10px}
+.bazaar-promo-card b{font-size:27px}
+.bazaar-promo-card strong{font-size:12px}
+.bazaar-about-strip p,.bazaar-contact-strip p{font-size:15px;line-height:1.8}
+.bazaar-about-strip>div>a{font-size:13px}
+.bazaar-contact-strip>a{font-size:13px}
+.bazaar-footer-main p,.bazaar-footer-main>div{font-size:13px}
+.bazaar-footer-main>div>b{font-size:14px}
+.bazaar-footer-bottom{font-size:12px}
+.bazaar-product-bottom button{padding:9px 11px}
+.bazaar-cart-head h2{font-size:22px}
+.bazaar-cart-empty h3{font-size:20px}
+.bazaar-cart-empty p,.bazaar-cart-items b{font-size:14px}
+.bazaar-cart-items small{font-size:12px}
+.bazaar-send-enquiry{font-size:14px}
+@media(max-width:760px){
+.store-topbar>div{font-size:11px}
+.store-brand{font-size:16px}
+.store-brand strong{font-size:9px}
+.store-search input{font-size:14px}
+.store-search button{font-size:13px}
+.store-nav>a,.store-nav-drop>a{font-size:14px}
+.store-nav-menu a{font-size:14px}
+.bazaar-hero-content h1{font-size:40px}
+.bazaar-hero-content p{font-size:14px;line-height:1.7}
+.bazaar-eyebrow{font-size:11px}
+.bazaar-primary-btn{font-size:13px}
+.bazaar-benefits b{font-size:12px}
+.bazaar-benefits small{font-size:10px}
+.bazaar-section-title h2{font-size:28px}
+.bazaar-category-tiles b{font-size:13px}
+.bazaar-category-tiles small{font-size:10px}
+.bazaar-product-body>small{font-size:9px}
+.bazaar-product-body h3{font-size:13px}
+.bazaar-product-body p{font-size:11px;line-height:1.55}
+.bazaar-product-bottom strong{font-size:11px}
+.bazaar-product-bottom button{font-size:10px}
+.bazaar-about-strip p,.bazaar-contact-strip p{font-size:14px}
+.bazaar-contact-strip>a{font-size:12px}
+.bazaar-footer-main p,.bazaar-footer-main>div{font-size:12px}
+.bazaar-footer-main>div>b{font-size:13px}
+.bazaar-footer-bottom{font-size:11px}
+}
+@media(max-width:390px){
+.bazaar-hero-content h1{font-size:35px}
+.bazaar-product-body h3{font-size:12px}
+}
