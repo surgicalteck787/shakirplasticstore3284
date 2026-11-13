@@ -51,8 +51,8 @@ export function CategoryPage({slug}){
  return <Layout><main className="inner-main">
   <a className="back-link" href="/"><ArrowLeft size={15}/> Back to home</a>
   <div className="inner-hero shawarma-collection-hero"><span>SHAKIR PLASTIC STORE · BAND ROAD, LAHORE · PAKISTAN-WIDE ENQUIRIES</span><h1>{isShawarma?'Shawarma Boxes in Pakistan':'Shawarma Boxes'} <em>{isShawarma?'Wholesale & Bulk Supply':'Wholesale Supplies'}</em></h1><p>{isShawarma?'Find takeaway shawarma packaging options for restaurants, fast-food outlets, cafés, cloud kitchens and food delivery businesses. Compare kraft, white, large and custom printed box options, then contact our Lahore store to confirm specifications, wholesale pricing and delivery availability for your city.':c[2]+' Contact Shakir Plastic Store on Band Road, Lahore for product details and bulk enquiries.'}</p><a className="page-quote" href={inquiry} target="_blank" rel="noreferrer"><MessageCircle size={17}/> Get wholesale quote</a></div>
-  {isShawarma&&<ShawarmaSeoContent faqs={faqs} inquiry={inquiry}/>}
   <div className="inner-section-head"><div><span>OUR CATALOGUE</span><h2>{c[0]}</h2></div><p>{products.length} catalogue items</p></div>{products.length?<Grid products={products}/>:<p className="no-products">Products in this category will be listed soon. Please contact us for availability.</p>}
+  {isShawarma&&<ShawarmaSeoContent faqs={faqs} inquiry={inquiry}/>}
   <div className="inner-callout"><div><h2>Need bulk quantities?</h2><p>Ask our team for current prices, available sizes and wholesale supply.</p></div><a href={wa('Assalam-o-Alaikum! I need a bulk quote for '+c[0]+'.')} target="_blank" rel="noreferrer">Enquire now <ArrowRight size={17}/></a></div>
   <div className="other-cats"><h2>Explore other categories</h2><div>{cats.filter(x=>x[1]!==slug).map(x=><a key={x[1]} href={'/'+x[1]}>{x[0]} <ArrowUpRight size={14}/></a>)}</div></div>
  </main></Layout>;
