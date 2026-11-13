@@ -80,3 +80,6 @@
 .shawarma-final-cta h2{margin:0 0 8px;color:#193b2f}
 .shawarma-final-cta p{line-height:1.7;color:#647268}
 @media(max-width:640px){.shawarma-seo-content{margin:30px auto}.shawarma-answer{padding:20px}.shawarma-internal-links{padding:18px}.shawarma-internal-links>div{grid-template-columns:1fr}.shawarma-content-block h2,.shawarma-internal-links h2,.shawarma-faq h2{font-size:22px}}
+
+/* Shakir Plastic Store signature on category and product collection images */
+.inner-product{position:relative}.inner-product .product-brand-stamp{position:absolute;top:148px;right:9px;bottom:auto;z-index:2;display:flex;align-items:center;gap:5px;padding:5px 7px;background:rgba(255,255,255,.94);border:1px solid #e2e9df;border-radius:5px;box-shadow:0 2px 10px rgba(20,50,35,.12);pointer-events:none}.inner-product .product-brand-stamp .store-logo-art{width:23px;height:23px;display:block}.inner-product .product-brand-stamp b{font:800 7px/1.15 'DM Sans',sans-serif;letter-spacing:.35px;color:#153b2e}
