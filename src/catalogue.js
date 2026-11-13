@@ -114,7 +114,7 @@ const imageOverrides = {
 };
 
 const suppliedProductImages = {
-  "Wooden Fruit Forks":["https://packagingmaster.pk/wp-content/uploads/2026/07/wooden-fruit-forks-3-500x500.webp","https://packagingmaster.pk/wp-content/uploads/2026/07/wooden-fruit-forks-2-500x500.webp"],
+  "Wooden Fruit Forks":["https://5mrorwxhjnrijii.leadongcdn.com/cloud/jqBplKpiRijSijjmlmlii/Natural-Smooth-Birch-Wood-Disposable-Fruit-Forks.jpg"],
   "Wooden Hair Brush":["https://packagingmaster.pk/wp-content/uploads/2026/06/wooden-hair-brush-for-women-500x500.webp","https://packagingmaster.pk/wp-content/uploads/2026/06/wooden-hair-brush-500x500.webp"],
   "White Paper Bowls":["https://packagingmaster.pk/wp-content/uploads/2026/06/disposable-white-paper-bowls-3-500x500.webp","https://packagingmaster.pk/wp-content/uploads/2026/06/disposable-white-paper-bowls-2-500x500.webp"],
   "Pizza Box Table":["https://packagingmaster.pk/wp-content/uploads/2026/06/pizza-saver-table-pakistan-3-500x500.webp","https://packagingmaster.pk/wp-content/uploads/2026/06/pizza-saver-table-pakistan-1-500x500.webp"],
