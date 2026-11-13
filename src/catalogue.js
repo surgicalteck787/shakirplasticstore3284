@@ -37,7 +37,7 @@ const rows = [
 ["Table Napkin Tissue","₨ 320 (reference)","Paper Products","table napkin tissues"],
 ["Napkin Tissue","₨ 250 (reference)","Paper Products","napkin tissues"],
 ["Kraft Paper Bag With Twisted Rope Handle","₨ 1,800 – ₨ 6,500","Shopping Bags","kraft paper bags with twisted rope handles"],
-["Umrah Tabarruk Boxes","₨ 2,500 – ₨ 4,500","Custom Boxes","Umrah tabarruk gift boxes"],
+["Umrah Tabarruk Boxes","₨ 2,500 – ₨ 4,500 (reference)","Umrah Tabarruk Boxes","Umrah tabarruk gift boxes"],
 ["Disposable Black Plastic Food Container","₨ 1,500 – ₨ 42,000","Food Packaging","black plastic food containers"],
 ["SOS Paper Bags","₨ 900 – ₨ 21,000","Shopping Bags","SOS paper bags"],
 ["Chopsticks","₨ 500 (reference)","Disposable Items","disposable chopsticks"],
@@ -91,6 +91,7 @@ const imageByCategory = {
   "Other Supplies": "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
 };
 const imageOverrides = {
+  "Umrah Tabarruk Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/umrah-tabarruk-boxes-custom-packaging-pakistan-packaging-master-1-750x750.webp",
   "Pizza Box": "https://packagingmaster.pk/wp-content/uploads/2025/12/kraft-pizza-box-packaging-master-pakistan-2-750x750.webp",
   "Burger Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/burger-boxes-custom-packaging-pakistan-packaging-master-2-750x750.webp",
   "Cupcake Boxes": "https://packagingmaster.pk/wp-content/uploads/2026/02/cupcake-packaging-boxes-pakistan-2-750x750.webp",
