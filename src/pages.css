@@ -52,3 +52,28 @@
 .kraft-internal-links p a{display:inline-flex;align-items:center;gap:5px}
 @media(max-width:760px){.kraft-shawarma-gallery{grid-template-columns:1fr 1fr}.kraft-shawarma-gallery img{height:175px}.kraft-internal-links>div{grid-template-columns:1fr}}
 @media(max-width:420px){.kraft-shawarma-gallery{grid-template-columns:1fr}.kraft-shawarma-gallery img{height:220px}}
+
+
+/* Shawarma collection SEO content */
+.shawarma-collection-hero{background:linear-gradient(115deg,#edf3e8 0%,#f5f1e7 100%)}
+.shawarma-seo-content{max-width:940px;margin:42px auto 58px;color:#44554a}
+.shawarma-answer{padding:24px 27px;background:#173f31;color:#fff;border-radius:14px;margin-bottom:30px}
+.shawarma-answer>span{font-size:10px;letter-spacing:2px;font-weight:800;color:#c6df9a}
+.shawarma-answer p{font-size:16px;line-height:1.85;margin:10px 0 0;color:#f0f4ef}
+.shawarma-content-block{margin:30px 0}
+.shawarma-content-block h2,.shawarma-internal-links h2,.shawarma-faq h2{font-size:25px;line-height:1.25;color:#193b2f;margin:0 0 13px;letter-spacing:-.5px}
+.shawarma-content-block p,.shawarma-content-block li{font-size:15px;line-height:1.85;color:#5d6c61}
+.shawarma-content-block ul,.shawarma-content-block ol{padding-left:23px}
+.shawarma-content-block li{padding:4px 0}
+.shawarma-internal-links{margin:36px 0;padding:25px;background:#f0f4ed;border:1px solid #e2e9df;border-radius:14px}
+.shawarma-internal-links>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.shawarma-internal-links a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;border-radius:8px;background:#fff;color:#28563e;text-decoration:none;font-size:13px;font-weight:750}
+.shawarma-internal-links a:hover{background:#e2eddd}
+.shawarma-faq{margin:38px 0}
+.shawarma-faq details{padding:17px 19px;margin:9px 0;background:#fff;border:1px solid #e5ebe3;border-radius:9px}
+.shawarma-faq summary{cursor:pointer;font-weight:750;color:#294638;line-height:1.5}
+.shawarma-faq details p{font-size:14px;line-height:1.8;color:#647268;margin:12px 0 0}
+.shawarma-final-cta{padding:28px;background:#f0f4ed;border-radius:14px}
+.shawarma-final-cta h2{margin:0 0 8px;color:#193b2f}
+.shawarma-final-cta p{line-height:1.7;color:#647268}
+@media(max-width:640px){.shawarma-seo-content{margin:30px auto}.shawarma-answer{padding:20px}.shawarma-internal-links{padding:18px}.shawarma-internal-links>div{grid-template-columns:1fr}.shawarma-content-block h2,.shawarma-internal-links h2,.shawarma-faq h2{font-size:22px}}
