@@ -31,8 +31,8 @@ export function CategoryPage({slug}){
  const c=cats.find(x=>x[1]===slug);if(!c)return <NotFound/>;
  const products=getProducts().filter(p=>p.category===c[0]);
  const isShawarma=slug==='shawarma-boxes';
- const title=isShawarma?'Shawarma Boxes in Pakistan | Wholesale & Custom Options | Shakir Plastic Store':c[0]+' Wholesale Supplies | Shakir Plastic Store';
- const description=isShawarma?'Explore kraft, white, large and custom printed shawarma boxes for restaurants and takeaway businesses. Ask Shakir Plastic Store Lahore for wholesale rates and Pakistan-wide order options.':c[2];
+ const title=isShawarma?'Shawarma Boxes in Pakistan | Wholesale Supplier':c[0]+' Wholesale Supplies | Shakir Plastic Store';
+ const description=isShawarma?'Kraft, white, large and custom printed shawarma boxes for restaurants. Request wholesale rates from Shakir Plastic Store, Lahore, and ask about delivery across Pakistan.':c[2];
  document.title=title;
  const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=description;
  let canonical=document.querySelector('link[rel="canonical"]');if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical)}canonical.href='https://shakirplasticstore3284.vercel.app/'+slug;
