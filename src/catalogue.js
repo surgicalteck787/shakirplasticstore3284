@@ -32,7 +32,7 @@ const rows = [
 ["Chocolate Cavity Boxes","₨ 2,300 – ₨ 8,700","Custom Boxes","chocolate cavity boxes"],
 ["Chocolate Boxes","₨ 1,225 – ₨ 3,000","Custom Boxes","chocolate boxes"],
 ["Pizza Box","₨ 2,000 – ₨ 50,000","Pizza Boxes","pizza boxes"],
-["Shawarma Boxes","₨ 850 – ₨ 15,000","Food Packaging","shawarma takeaway boxes"],
+["Shawarma Boxes","₨ 850 – ₨ 15,000","Shawarma Boxes","shawarma takeaway boxes"],
 ["Kraft Shawarma Boxes","Ask for current price","Shawarma Boxes","kraft shawarma takeaway boxes"],
 ["White Shawarma Boxes","Ask for current price","Shawarma Boxes","white paper shawarma boxes"],
 ["Large Shawarma Boxes","Ask for current price","Shawarma Boxes","large shawarma takeaway boxes"],
