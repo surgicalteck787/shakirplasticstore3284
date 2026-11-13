@@ -89,3 +89,75 @@
 @media(max-width:900px){.page-header{grid-template-columns:1fr auto;gap:14px}.page-header nav{grid-column:1/-1;grid-row:2;justify-content:flex-start;flex-wrap:wrap}.inner-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.other-cats>div,.category-link-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:760px){.page-header{padding:12px 16px;grid-template-columns:1fr auto}.page-header nav{order:3;grid-column:1/-1;justify-content:space-between;gap:9px}.page-header nav>a,.page-nav-trigger{font-size:10px!important}.page-header>.page-quote{padding:10px 12px}.inner-main{padding:22px 15px 55px}.inner-hero{padding:33px 23px}.inner-hero h1{font-size:36px}.inner-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.inner-product>a img,.inner-product>img{height:145px}.inner-product>div{padding:11px}.inner-product h3{font-size:12px}.inner-product p{font-size:9px}.other-cats>div,.category-link-grid{grid-template-columns:repeat(2,1fr)}.inner-callout{padding:24px;align-items:flex-start;flex-direction:column}.page-footer{padding:24px 16px}.product-detail-layout{grid-template-columns:1fr;gap:24px}.product-detail-image,.product-detail-image img{min-height:280px;height:280px}.product-detail-description{padding:24px 18px}.product-reviews{grid-template-columns:1fr}.product-reviews-heading{grid-column:auto}.shawarma-seo-content{margin:30px auto}.shawarma-content-block p,.shawarma-content-block li{font-size:14px}}
 @media(max-width:430px){.inner-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-brand b{font-size:13px}}
+
+/* Readability pass: improve text sizing across collection and product pages */
+.page-brand b{font-size:18px}
+.page-brand small{font-size:10px}
+.page-header nav a,.page-nav-trigger{font-size:14px!important}
+.page-quote{font-size:13px}
+.back-link{font-size:13px}
+.inner-hero>span,.inner-section-head span,.text-page>span{font-size:11px}
+.inner-hero h1,.text-page h1{font-size:clamp(39px,5vw,60px)}
+.inner-hero p,.text-page>p{font-size:17px;line-height:1.85}
+.inner-section-head h2,.other-cats h2{font-size:30px}
+.inner-section-head p{font-size:14px}
+.inner-product small{font-size:10px}
+.inner-product h3{font-size:16px;line-height:1.45}
+.inner-product p{font-size:13px;line-height:1.65}
+.inner-product>div>a:last-child{font-size:12px}
+.inner-callout h2{font-size:28px}
+.inner-callout p{font-size:14px;line-height:1.7}
+.inner-callout>a{font-size:13px}
+.other-cats a,.category-link-grid a{font-size:13px}
+.page-footer span,.page-footer a{font-size:14px}
+.product-detail-copy h1{font-size:clamp(35px,4vw,50px)}
+.product-detail-copy>p{font-size:16px;line-height:1.85}
+.product-detail-price{font-size:26px}
+.product-detail-points>div{font-size:14px}
+.product-detail-contact{font-size:13px}
+.product-detail-description h2{font-size:31px}
+.product-detail-description p{font-size:16px;line-height:1.9}
+.product-reviews-heading h2{font-size:35px}
+.product-reviews-heading p,.review-empty p{font-size:15px}
+.review-empty h3,.product-review-form h3{font-size:20px}
+.product-review-form label{font-size:14px}
+.product-review-form input,.product-review-form select,.product-review-form textarea{font-size:15px}
+.product-review-form>small{font-size:12px}
+.shawarma-answer>span{font-size:11px}
+.shawarma-answer p{font-size:19px;line-height:1.85}
+.shawarma-content-block h2,.shawarma-internal-links h2,.shawarma-faq h2{font-size:31px}
+.shawarma-content-block p,.shawarma-content-block li{font-size:17px;line-height:1.9}
+.shawarma-internal-links a{font-size:15px}
+.shawarma-faq summary{font-size:17px}
+.shawarma-faq details p{font-size:16px;line-height:1.85}
+.shawarma-final-cta p{font-size:17px}
+@media(max-width:760px){
+.page-brand b{font-size:15px}
+.page-header nav a,.page-nav-trigger{font-size:12px!important}
+.page-quote{font-size:12px}
+.back-link{font-size:12px}
+.inner-hero h1,.text-page h1{font-size:38px}
+.inner-hero p,.text-page>p{font-size:15px;line-height:1.8}
+.inner-section-head h2,.other-cats h2{font-size:25px}
+.inner-product h3{font-size:13px}
+.inner-product p{font-size:11px}
+.inner-product>div>a:last-child{font-size:11px}
+.inner-callout h2{font-size:24px}
+.inner-callout p{font-size:13px}
+.other-cats a,.category-link-grid a{font-size:12px}
+.page-footer span,.page-footer a{font-size:13px}
+.product-detail-copy h1{font-size:34px}
+.product-detail-copy>p{font-size:14px}
+.product-detail-points>div{font-size:13px}
+.product-detail-description h2{font-size:25px}
+.product-detail-description p{font-size:14px}
+.product-reviews-heading h2{font-size:29px}
+.product-reviews-heading p,.review-empty p{font-size:14px}
+.shawarma-answer p{font-size:16px}
+.shawarma-content-block h2,.shawarma-internal-links h2,.shawarma-faq h2{font-size:24px}
+.shawarma-content-block p,.shawarma-content-block li{font-size:15px;line-height:1.85}
+.shawarma-internal-links a{font-size:14px}
+.shawarma-faq summary{font-size:15px}
+.shawarma-faq details p{font-size:14px}
+.shawarma-final-cta p{font-size:15px}
+}
