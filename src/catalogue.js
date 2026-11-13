@@ -91,6 +91,7 @@ const imageByCategory = {
   "Other Supplies": "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
 };
 const imageOverrides = {
+  "Shawarma Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/shawarma-boxes-custom-packaging-pakistan-packaging-master-3-750x750.webp",
   "Umrah Tabarruk Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/umrah-tabarruk-boxes-custom-packaging-pakistan-packaging-master-1-750x750.webp",
   "Pizza Box": "https://packagingmaster.pk/wp-content/uploads/2025/12/kraft-pizza-box-packaging-master-pakistan-2-750x750.webp",
   "Burger Boxes": "https://packagingmaster.pk/wp-content/uploads/2025/11/burger-boxes-custom-packaging-pakistan-packaging-master-2-750x750.webp",
